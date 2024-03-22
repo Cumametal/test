@@ -33,7 +33,7 @@ col_izq, col_der = st.columns([3, 1])
 col_izq.subheader("RFQ control")
 rfq_control = conn.read(worksheet="1 rfq control",ttl=5)
 rfq_control = rfq_control.dropna(how = 'all')
-col_izq.write(rfq_control.tail(5))
+col_izq.write(rfq_control.tail(10))
 
 col_der.subheader("Control clientes")
 clientes_df = conn.read(worksheet="clientes_df", ttl=5)
